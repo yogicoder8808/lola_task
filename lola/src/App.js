@@ -40,7 +40,7 @@ function App() {
 
       {/* Left Section */}
 
-      <Box sx={{ position: 'relative', width: '623px', height: '468px', left: '114px', top: '194px' }}>
+      <Box sx={{ position: 'relative', width: '623px', height: '468px', left: '20px', top: '194px' }}>
         <img src={illustrationUpload} alt="Illustration Upload" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </Box>
 
