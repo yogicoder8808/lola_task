@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Box, Typography, Grid, TextField, Checkbox, MenuItem, Select, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import illustrationUpload from '../Images/illustration_upload.jpg';
-import uploadIcon from '../Images/upload_icon.jpg';
+import uploadIcon from '../Images/upload_icon.png';
 import footerImage from '../Images/Footer.jpg';
 
 function Homepage() {
@@ -90,7 +90,7 @@ function Homepage() {
             marginBottom: '30px',
           }}
         >
-          <img src={uploadIcon} alt="Upload Icon" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
+          <img src={uploadIcon} alt="Upload Icon" style={{ width: '33.33px', height: '28.4px', borderRadius: '50%'}} />
           <Typography variant="body2" color="textSecondary">
             Upload File
           </Typography>
@@ -158,13 +158,14 @@ function Homepage() {
           variant="contained"
           sx={{
             width: '100%',
-            backgroundColor: '#4747d1',
+            backgroundColor: '#5166FE',
             color: 'white',
             fontWeight: 'bold',
             fontSize: '14px',
             textTransform: 'none',
+            borderRadius: '6px',
             '&:hover': {
-              backgroundColor: '#4747d1',
+              backgroundColor: '#5166FE',
             },
           }}
           onClick={handleGenerateClick}
