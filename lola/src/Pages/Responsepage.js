@@ -6,6 +6,7 @@ import arrowDown from '../Images/arrow-down.jpg';
 import arrowUp from '../Images/arrow-up.jpg';
 import dollor from '../Images/dollor.png';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import footerImage from '../Images/Footer.jpg';
 
 function Responsepage() {
     const navigate = useNavigate();
@@ -14,112 +15,48 @@ function Responsepage() {
         navigate('/');
     };
 
-    // Data for left and right grids
     const gridData = [
-        {
-            left: {
-                title: 'Credit Card APR',
-                value: '28.5%',
-            },
-            right: {
-                title: 'Min Credit Card Payment',
-                value: '3% of balance',
-            },
-        },
-        {
-            left: {
-                title: 'Current Monthly Payment',
-                value: '$1,977',
-            },
-            right: {
-                title: 'Outstanding Loan Amount',
-                value: '$191,450',
-            },
-        },
-        {
-            left: {
-                title: 'Monthly Property Tax',
-                value: '$397.19',
-            },
-            right: {
-                title: 'Monthly Insurance Payment',
-                value: '$100',
-            },
-        },
+        { left: { title: 'Credit Card APR', value: '28.5%' }, right: { title: 'Min Credit Card Payment', value: '3% of balance' } },
+        { left: { title: 'Current Monthly Payment', value: '$1,977' }, right: { title: 'Outstanding Loan Amount', value: '$191,450' } },
+        { left: { title: 'Monthly Property Tax', value: '$397.19' }, right: { title: 'Monthly Insurance Payment', value: '$100' } },
     ];
 
-  // Data for loan term boxes with repeated data
-  const loanTermBoxes = [
-    {
-        loanTerm: '360 Months',
-        scenario: 'Scenario 1',
-        interestRate: '4.5%',
-        monthlyPayment: '$973.15',
-        repeatedData: [
-            {
-                primaryText: 'Total monthly payment',
-                secondaryText: 'vs current liabilities',
-                arrowText: 'Lower by $1,003.85',
-            },
-            {
-                primaryText: 'Total paid over loan life',
-                secondaryText: 'vs current situation',
-                arrowText: 'Higher by $42,293.57',
-            },
-            {
-                primaryText: 'Total interest paid',
-                secondaryText: 'over lifetime of loan',
-                arrowText: '$158,884.00',
-            },
-        ],
-    },
-    {
-        loanTerm: '180 Months',
-        scenario: 'Scenario 2',
-        interestRate: '3.75%',
-        monthlyPayment: '$1,392.32',
-        repeatedData: [
-            {
-                primaryText: 'Total monthly payment',
-                secondaryText: 'vs current liabilities',
-                arrowText: 'Lower by $584.68',
-            },
-            {
-                primaryText: 'Total paid over loan life',
-                secondaryText: 'vs current situation',
-                arrowText: 'Less by $57,422.83',
-            },
-            {
-                primaryText: 'Total interest paid',
-                secondaryText: 'over lifetime of loan',
-                arrowText: '$59,167.60',
-            },
-        ],
-    },
-    {
-        loanTerm: '240 Months',
-        scenario: 'Scenario 3',
-        interestRate: '4.25%',
-        monthlyPayment: '$1,187.99',
-        repeatedData: [
-            {
-                primaryText: 'Total monthly payment',
-                secondaryText: 'vs current liabilities',
-                arrowText: 'Lower by $789.01',
-            },
-            {
-                primaryText: 'Total paid over loan life',
-                secondaryText: 'vs current situation',
-                arrowText: 'Less by $22,922.83',
-            },
-            {
-                primaryText: 'Total interest paid',
-                secondaryText: 'over lifetime of loan',
-                arrowText: '$93,667.60',
-            },
-        ],
-    },
-];
+    const loanTermBoxes = [
+        {
+            loanTerm: '360 Months',
+            scenario: 'Scenario 1',
+            interestRate: '4.5%',
+            monthlyPayment: '$973.15',
+            repeatedData: [
+                { primaryText: 'Total monthly payment', secondaryText: 'vs current liabilities', arrowText: 'Lower by $1,003.85' },
+                { primaryText: 'Total paid over loan life', secondaryText: 'vs current situation', arrowText: 'Higher by $42,293.57' },
+                { primaryText: 'Total interest paid', secondaryText: 'over lifetime of loan', arrowText: '$158,884.00' },
+            ],
+        },
+        {
+            loanTerm: '180 Months',
+            scenario: 'Scenario 2',
+            interestRate: '3.75%',
+            monthlyPayment: '$1,392.32',
+            repeatedData: [
+                { primaryText: 'Total monthly payment', secondaryText: 'vs current liabilities', arrowText: 'Lower by $584.68' },
+                { primaryText: 'Total paid over loan life', secondaryText: 'vs current situation', arrowText: 'Less by $57,422.83' },
+                { primaryText: 'Total interest paid', secondaryText: 'over lifetime of loan', arrowText: '$59,167.60' },
+            ],
+        },
+        {
+            loanTerm: '240 Months',
+            scenario: 'Scenario 3',
+            interestRate: '4.25%',
+            monthlyPayment: '$1,187.99',
+            repeatedData: [
+                { primaryText: 'Total monthly payment', secondaryText: 'vs current liabilities', arrowText: 'Lower by $789.01' },
+                { primaryText: 'Total paid over loan life', secondaryText: 'vs current situation', arrowText: 'Less by $22,922.83' },
+                { primaryText: 'Total interest paid', secondaryText: 'over lifetime of loan', arrowText: '$93,667.60' },
+            ],
+        },
+    ];
+    
     return (
         <Box
             sx={{
@@ -130,7 +67,7 @@ function Responsepage() {
                 left: '226px',
                 backgroundColor: '#ffffff',
                 border: '1px solid rgba(0, 0, 0, 0.1)',
-                textAlign: 'center', // Center aligning content
+                textAlign: 'center', 
             }}
         >
 
@@ -229,75 +166,75 @@ function Responsepage() {
                     Let's take a look at your Debt Refinance Scenarios
                 </Typography>
 
-                {/* Mapping through grid data for Box_1 */}
+            {/* Mapping through grid data for Box_1 */}
 
-                <Grid container spacing={2} sx={{ marginTop: '20px' }}>
-                    {gridData.map((data, index) => (
-                        <React.Fragment key={index}>
+            <Grid container spacing={2} sx={{ marginTop: '20px' }}>
+                {gridData.map((data, index) => (
+                    <React.Fragment key={index}>
 
-                            {/* Left Grid */}
-                            <Grid item xs={6} sx={{ textAlign: 'left', marginTop: '20px' }}>
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        fontFamily: 'Public Sans',
-                                        fontWeight: 600,
-                                        fontSize: '14px',
-                                        lineHeight: '22px',
-                                        color: '#5D6692',
-                                        marginLeft: '20px',
-                                    }}
-                                >
-                                    {data.left.title}
-                                </Typography>
+                        {/* Left Grid */}
+                        <Grid item xs={6} sx={{ textAlign: 'left', marginTop: '20px' }}>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    fontFamily: 'Public Sans',
+                                    fontWeight: 600,
+                                    fontSize: '14px',
+                                    lineHeight: '22px',
+                                    color: '#5D6692',
+                                    marginLeft: '20px',
+                                }}
+                            >
+                                {data.left.title}
+                            </Typography>
 
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        fontFamily: 'Public Sans',
-                                        fontWeight: 700,
-                                        fontSize: '18px',
-                                        lineHeight: '28px',
-                                        color: '#3D4ECD',
-                                        marginTop: '5px',
-                                        marginLeft: '20px',
-                                    }}
-                                >
-                                    {data.left.value}
-                                </Typography>
-                            </Grid>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    fontFamily: 'Public Sans',
+                                    fontWeight: 700,
+                                    fontSize: '18px',
+                                    lineHeight: '28px',
+                                    color: '#3D4ECD',
+                                    marginTop: '5px',
+                                    marginLeft: '20px',
+                                }}
+                            >
+                                {data.left.value}
+                            </Typography>
+                        </Grid>
 
-                            {/* Right Grid */}
-                            <Grid item xs={6} sx={{ textAlign: 'left', marginTop: '20px' }}>
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        fontFamily: 'Public Sans',
-                                        fontWeight: 600,
-                                        fontSize: '14px',
-                                        lineHeight: '22px',
-                                        color: '#5D6692',
-                                    }}
-                                >
-                                    {data.right.title}
-                                </Typography>
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        fontFamily: 'Public Sans',
-                                        fontWeight: 700,
-                                        fontSize: '18px',
-                                        lineHeight: '28px',
-                                        color: '#3D4ECD',
-                                        marginTop: '5px',
-                                    }}
-                                >
-                                    {data.right.value}
-                                </Typography>
-                            </Grid>
-                        </React.Fragment>
-                    ))}
-                </Grid>
+                        {/* Right Grid */}
+                        <Grid item xs={6} sx={{ textAlign: 'left', marginTop: '20px' }}>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    fontFamily: 'Public Sans',
+                                    fontWeight: 600,
+                                    fontSize: '14px',
+                                    lineHeight: '22px',
+                                    color: '#5D6692',
+                                }}
+                            >
+                                {data.right.title}
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    fontFamily: 'Public Sans',
+                                    fontWeight: 700,
+                                    fontSize: '18px',
+                                    lineHeight: '28px',
+                                    color: '#3D4ECD',
+                                    marginTop: '5px',
+                                }}
+                            >
+                                {data.right.value}
+                            </Typography>
+                        </Grid>
+                    </React.Fragment>
+                ))}
+            </Grid>
 
                 {/* Link */}
                 <Link 
@@ -367,77 +304,77 @@ function Responsepage() {
                         {box.loanTerm}
                     </Typography>
 
-                    {/* Primary Text vs Secondary text */}
+                {/* Primary Text vs Secondary text */}
 
-                    {box.repeatedData.map((data, dataIndex) => (
-                        <Box key={dataIndex} sx={{ marginTop: '40px' }}>
-                            <Grid container spacing={2} sx={{ textAlign: 'left' }}>
-                                <Grid item xs={6}>
-                                    <Typography
-                                        sx={{
-                                            fontFamily: 'Public Sans',
-                                            fontWeight: 400,
-                                            fontSize: '14px',
-                                            lineHeight: '22px',
-                                            color: '#5D6692',
-                                            height: '22px',
-                                            width: '180px',
-                                            marginLeft: '30px'
-                                        }}
-                                    >
-                                        {data.primaryText}
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <Typography
-                                        sx={{
-                                            fontFamily: 'Public Sans',
-                                            fontWeight: 400,
-                                            fontSize: '14px',
-                                            lineHeight: '22px',
-                                            color: 'rgba(93, 102, 146, 0.5)', // Less opacity
-                                            height: '22px',
-                                            width: '180px',
-                                            marginLeft: dataIndex === 0 ? '12px' : dataIndex === 1 ? '14px' : '-20px', // Adjust marginLeft based on index
-                                        }}
-                                    >
-                                        {data.secondaryText}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-
-                            {/* Image and text */}
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginTop: '2px', 
-                                }}
-                            >
-                                <img
-                                    src={dataIndex === 2 ? dollor : (data.arrowText.includes('Higher') ? arrowUp : arrowDown)} 
-                                    alt="Arrow" 
-                                    style={{
-                                        width: '24px',
-                                        height: '24px',
-                                        marginRight: '8px', 
-                                    }}
-                                />
+                {box.repeatedData.map((data, dataIndex) => (
+                    <Box key={dataIndex} sx={{ marginTop: '40px' }}>
+                        <Grid container spacing={2} sx={{ textAlign: 'left' }}>
+                            <Grid item xs={6}>
                                 <Typography
                                     sx={{
                                         fontFamily: 'Public Sans',
-                                        fontWeight: 600,
-                                        fontSize: '16px',
-                                        lineHeight: '24px',
-                                        color: data.arrowText.includes('Higher') ? '#E71D36' : '#0d8745',
-                                        height: '24px',
+                                        fontWeight: 400,
+                                        fontSize: '14px',
+                                        lineHeight: '22px',
+                                        color: '#5D6692',
+                                        height: '22px',
+                                        width: '180px',
+                                        marginLeft: '30px'
                                     }}
                                 >
-                                    {data.arrowText}
+                                    {data.primaryText}
                                 </Typography>
-                            </Box>
+                            </Grid>
+                        <Grid item xs={6}>
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Public Sans',
+                                    fontWeight: 400,
+                                    fontSize: '14px',
+                                    lineHeight: '22px',
+                                    color: 'rgba(93, 102, 146, 0.5)', // Less opacity
+                                    height: '22px',
+                                    width: '180px',
+                                    marginLeft: dataIndex === 0 ? '12px' : dataIndex === 1 ? '14px' : '-20px', // Adjust marginLeft based on index
+                                }}
+                             >
+                                {data.secondaryText}
+                            </Typography>
+                        </Grid>
+                    </Grid>
+
+                    {/* Image and text */}
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginTop: '2px', 
+                            }}
+                        >
+                            <img
+                                src={dataIndex === 2 ? dollor : (data.arrowText.includes('Higher') ? arrowUp : arrowDown)} 
+                                alt="Arrow" 
+                                style={{
+                                    width: '24px',
+                                    height: '24px',
+                                    marginRight: '8px', 
+                                }}
+                            />
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Public Sans',
+                                    fontWeight: 600,
+                                    fontSize: '16px',
+                                    lineHeight: '24px',
+                                    color: data.arrowText.includes('Higher') ? '#E71D36' : '#0d8745',
+                                    height: '24px',
+                                }}
+                            >
+                                {data.arrowText}
+                            </Typography>
                         </Box>
-                    ))}
+                    </Box>
+                ))}
 
                     {/* Scenario box */}
                     <Box
@@ -539,9 +476,14 @@ function Responsepage() {
                     </Box>
                 </Box>
             ))}
+
+            {/*Footer*/}
+            <Box sx={{ position: 'absolute', bottom: '10px', left: '10px' }}>
+                <img src={footerImage} alt="Footer" style={{ width: '114px' }} />
             </Box>
-        
+        </Box>
     );
 }
 
 export default Responsepage;
+
